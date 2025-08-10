@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sekalalarobert.com/about</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+<!-- Naviagtion links in header -->
+  <header>
+    <nav>
+      <div class="nav">
+        <ul class="links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li><!--class active added to make about link standout-->
+          <li><a href="Manifesto.html">MANIFESTO</a></li>
+          <li><a href="news.html">NEWS&UPDATES</a></li>
+          <li><a href="contacts.html">CONTACTS</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<!-- Body fieldset Section -->
+  <section class="about-section" id="about">
+    <!-- Division to nest heading and star images in "top" class -->
+    <div class="top">
+      <p style="font-size: 35px; margin-top: 10px;">GET TO KNOW - ROBERT SSEKALALA</p>
+      <img src="Group 8.png" alt="Robert Ssekalala">
+    </div>
+<!-- Division with class "cards-wrapper" to nest the class "cards" which includes class "vertext" for 
+ vertical text, and class "cards" which nests individual class "card" fieldset elements -->
+    <div class="cards-wrapper">
+      <div class="vertext">LEADERSHIP WITH INTEGRITY</div>
+      <div class="cards">
+<!-- Card1 - Vision fieldset -->
+        <div class="card">
+          <fieldset>
+            <legend><img src="vision.png" alt="Vision"></legend>
+            <h3>VISION. INTEGRITY. ACTION.</h3>
+            <p class="text-preview">Robert Ssekalala champions justice, service, and inclusive leadership for a better Kasoozi North future...</p>
+<!-- Button that diplays vision modal  -->
+            <button class="readmore" data-fulltext="
+      Robert Ssekalala champions justice, service, and inclusive leadership for a better Kasoozi North future.
+      Vision:
+      A united, empowered, and prosperous Kasozi North where every citizen has access to quality services, equal opportunity, and a voice in leadership.
+      Mission:
+      To be a servant leader who listens, acts, and transforms the lives of the people of Kasozi North through inclusive governance, sustainable development, and grassroots empowerment.
+
+      Career Achievements & Community Work
+      Public Service Experience:
+      Over the past 12 years, Robert has worked in various roles within local government and NGOs, focusing on youth empowerment, education access, and rural development.
+
+      Founder, Kasozi Uplift Foundation:
+      Provides school fees for orphans, mentorship for youth, and small business support for women in rural areas.
+
+      Health & Sanitation Projects:
+      Led successful community initiatives to build boreholes, promote hygiene education, and improve maternal health services across five parishes.
+
+      Youth Skills Development:
+      Supported over 400 youth in Kasozi North to gain practical skills in carpentry, tailoring, and agriculture.
+">READ MORE</button>
+          </fieldset>
+        </div>
+<!-- card2 - education fieldset -->
+        <div class="card">
+          <fieldset>
+            <legend><img src="edu.png" alt="Education"></legend>
+            <h3>EDUCATION</h3>
+            <p class="text-preview">Robert Ssekalala holds degrees in Public Administration and Leadership...</p>
+            <button class="readmore" data-fulltext="
+Robert Ssekalala holds a Bachelors Degree in Public Administration and Management from Makerere University.
+He also pursued a Postgraduate Diploma in Leadership and Governance from Uganda Management Institute (UMI),
+equipping him with the skills to serve effectively in public office.
+">READ MORE</button>
+          </fieldset>
+        </div>
+<!-- card3 - family fiedset -->
+        <div class="card">
+          <fieldset>
+            <legend><img src="family.png" alt="Family"></legend>
+            <h3>FAMILY & VALUES</h3>
+            <p class="text-preview">Rooted in faith and family, Robert leads with humility, integrity, and servant leadership...</p>
+            <button class="readmore" data-fulltext="
+Born and raised in Kasozi North, Robert is a devoted husband and father of three.
+He grew up in a humble family that instilled in him the values of honesty, hard work, respect for others,
+and the belief that leadership is a duty to uplift—not a privilege for personal gain.
+
+His Christian faith guides his decisions, and he believes in servant leadership rooted in love, unity, and truth.
+">READ MORE</button>
+          </fieldset>
+        </div>
+
+      </div><!--closes class "cards"-->
+    </div><!--closes classs "class-wrapper"-->
+  </section>
+
+  <!-- Modal Html code-->
+  <div id="modal" class="modal"><!--id for javascript, and class allows CSS decoration of entire modal object-->
+    <div class="modal-content"><!--styles modal content-->
+      <span class="close">&times;</span><!--for the close(x) button-->
+      <p id="modal-text"></p><!--for modal text design-->
+    </div>
+  </div>
+
+  <script src="aboutscript.js"></script>
+</body>
+</html>

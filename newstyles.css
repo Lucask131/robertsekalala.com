@@ -1,0 +1,164 @@
+/* === BASE RESET === */
+* {
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lavender;
+  color: #000;
+}
+
+/* === NAVIGATION === */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+  }
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-top: 1rem;
+  margin-left: 6rem;
+}
+
+@media (min-width: 768px) {
+  .links {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.nav li {
+  font-size: 1.3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #002417;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #31487A;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* === VERTICAL TEXT === */
+.vertext {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -50px;
+  top: 160px;
+  font-size: 0.9rem;
+  color: #002147;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* === ART SECTION === */
+.art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  margin-left: 13rem;
+  margin-right: 13rem;
+}
+
+@media (min-width: 768px) {
+  .art {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 5%;
+  }
+}
+
+.artbtn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.art button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.art button:hover {
+  background-color: #ddd;
+}
+
+.art img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.artxt {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .artxt {
+    margin-left: 2rem;
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+#update {
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+}
+th {
+  font-weight: bold;
+  font-size: larger;
+  text-align: left;
+  border-bottom: 3px solid #002147;
+  padding: 30px;
+}
+td {
+  padding: 30px;
+  vertical-align: top;
+}
+.event {
+  font-size: 14px;
+  color: #507688;
+}
+
+

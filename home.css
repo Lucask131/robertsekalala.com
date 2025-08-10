@@ -1,0 +1,229 @@
+* {
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lavender;
+  color: #000;
+}
+
+/* === HEADER & NAVIGATION === */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#logo {
+  width: 8%;
+  height: 8%;
+  object-fit: contain;
+}
+
+#logoSpan {
+  color: #364775;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  line-height: 1.1;
+  margin-left: -15%;
+}
+
+@media (max-width: 600px) {
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+  #logoSpan {
+    font-size: 1rem;
+  }
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;;
+  margin-top: 1rem;
+  margin-right: 1%;
+}
+
+@media (min-width: 768px) {
+  .links {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 5rem;
+  }
+}
+
+.nav li {
+  font-size: 1.3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #002417;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #31487A;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* === VERTICAL ROTATED TEXT === */
+#vertext {
+  transform: rotate(90deg);
+  font-size: 1rem;
+  color: #002147;
+  text-align: left;
+  align-self: flex-start;
+  white-space: nowrap;
+  margin-left: -30%;
+}
+
+@media (max-width: 600px) {
+  #vertext {
+    font-size: 0.85rem;
+  }
+}
+
+/* === MAIN CAMPAIGN SECTION === */
+.campaign {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+  .campaign {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; /*Spread items to edges */
+    gap: 10rem;
+    padding: 13rem 15vw;
+  }
+}
+
+ .campaign-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left*/
+  max-width: 400px;
+  width: 100%;
+  margin-top: -20%;
+  margin-left: -20%;
+  margin-right: 30%;
+
+}
+
+
+.campaign-image {
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+  max-width: 520px;
+} 
+
+ .campaign-image img {
+  width: 250%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(49,72,122,0.08);
+  margin-top: -150%;
+  margin-right: -110%;
+}
+
+@media (max-width: 900px) {
+  .campaign-image {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .campaign-image img {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .campaign {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .campaign-text {
+    align-items: center;
+    text-align: center;
+  }
+  .campaign-image img {
+    max-width: 180px;
+  }
+} 
+
+.small-heading {
+  font-size: 300%;
+  color: #333;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.barriers {
+  font-weight: 800;
+  font-size: 500%;
+  margin-bottom: 15px;
+  color: #1B2336;
+  text-align: left; 
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.barriers .main-text {
+  display: inline;
+  font-size: 30px;
+  white-space: nowrap; /* Keeps "Building Bridges" in one line */
+}
+
+.barriers span:not(.main-text) {
+  display: block;
+  font-size: 48px;
+  color: #1B2336;
+  font-weight: 600;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  gap: 10px;
+}
+
+.countdown div {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.countdown span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.countdown p {
+  font-size: 0.8rem;
+  color: #777;
+}
+

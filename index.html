@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sekalalarobert.com/home</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- =====================
+       Navigation Header
+  ====================== -->
+  <header>
+    <nav>
+      <div class="nav">
+        <img src="logo.png" id="logo" alt="logo image">
+        <span id="logoSpan"><b>ROBERT</b><br>SEKALALA</span>
+        <ul class="links">
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="Manifesto.html">MANIFESTO</a></li>
+          <li><a href="news.html">NEWS&UPDATES</a></li>
+          <li><a href="contacts.html">CONTACTS</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- =====================
+       Main Campaign Section
+  ====================== -->
+  <main class="campaign">
+    <span id="vertext">LEADERSHIP WITH INTEGRITY</span>
+    <div class="campaign-text">
+      <p class="small-heading">Join Our Campaign</p>
+      <p class="barriers">Building Bridges,<br />
+        <span>Breaking Barriers</span>
+      </p>
+      <div class="countdown">
+        <div>
+          <span id="days">22</span>
+          <p>Days</p>
+        </div>
+        <div>
+          <span id="hours">09</span>
+          <p>Hours</p>
+        </div>
+        <div>
+          <span id="minutes">45</span>
+          <p>Minutes</p>
+        </div>
+        <div>
+          <span id="seconds">12</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+        <img src="R2.png" alt="R2 logo">
+        <img src="R1.png" alt="R1 logo">
+        <img src="R3.png" alt="R3 logo">
+      </div>  
+    </div>
+    <div class="campaign-image">
+      <img src="sam.png" alt="SSEKALALA" />
+    </div>
+  </main>
+
+  <!-- =====================
+       Countdown Timer Script
+  ====================== -->
+  <script>
+    // Set your campaign date (YYYY-MM-DDTHH:MM:SS format)
+    const campaignDate = new Date("2025-12-31T00:00:00").getTime();
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = campaignDate - now;
+
+      // Calculate time parts
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update HTML
+      document.getElementById("days").innerText =
+        days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerText =
+        hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerText =
+        minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerText =
+        seconds < 10 ? "0" + seconds : seconds;
+
+      // Stop countdown if the date is passed
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.querySelector(".countdown").innerHTML =
+          "<p>Campaign Started!</p>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

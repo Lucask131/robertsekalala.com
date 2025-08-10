@@ -1,0 +1,311 @@
+/* === BASE RESET === */
+* {
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lavender;
+  color: #000;
+}
+
+/* === NAVIGATION === */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+  }
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-top: 1rem;
+  margin-left: 6rem;
+}
+
+@media (min-width: 768px) {
+  .links {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.nav li {
+  font-size: 1.3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #002417;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #31487A;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* === TOP IMAGE === */
+.top {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.top img {
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === CARD SECTION === */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .cards-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.vertext {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -3%;
+  top: 45%;
+  font-size: 1rem;
+  color: #002147;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+.card {
+  text-align: center;
+}
+
+fieldset {
+  background-color: #1B2336;
+  color: #fff;
+  width: 100%;
+  max-width: 330px;
+  min-height: 310px;
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.card legend {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card button {
+  height: 40px;
+  width: 200px;
+  font-weight: bold;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #1B2336;
+}
+
+.card button:hover {
+  background-color: #ccc;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #CFE5FA;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  color: #000;
+}
+
+#modal-text {
+  white-space: pre-line;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #002147;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* === CONTACT PAGE === */
+.c_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  gap: 2rem;
+}
+    
+@media (min-width: 768px) {
+  .c_content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.verttext {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -20px;
+  top: 150px;
+  font-size: 0.9rem;
+  color: #002147;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.ctxt {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* === FOOTER === */
+.contact-footer {
+  width: 100%;
+  background-color: #1B2336;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.footer-section {
+  padding: 1rem;
+  text-align: left;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a.active {
+  color: gray;
+}
+
+.contactModal {
+  background-color: #CFE5FA;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.ContactmodalContent {
+  color: #002147;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding: 1rem;
+  background-color: #1B2336;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
